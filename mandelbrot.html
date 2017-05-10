@@ -1,0 +1,22 @@
+<doctype html>
+<html>
+<head>
+<title>Mandelbrot</title>
+<script type="text/javascript" src="mbrot.js" ></script>
+</head>
+<body>
+<div><h1>Mandelbrot Set - in JavaScript, With Scaling</h1>
+<h2>Nick Radonic nick.radonic@gmail.com</h2></div>
+<div>
+<canvas id="myCanvas" width="1000" height="1000" style="border:1px solid  #00ff00;margin:auto; display:block;" ></canvas>
+
+</div>
+<div>
+    <button onclick="zoomOut()" style="margin:auto;" >Zoom Out</button>
+    <p >Zoom Level: <span id="ZoomLevel" ></span></p>
+</div>
+</body>
+<script>
+document.getElementById("myCanvas").addEventListener('click',recenterAndDraw);
+mandelbrot();</script>
+</head>
